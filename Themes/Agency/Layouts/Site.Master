@@ -24,7 +24,7 @@
     {
         var page = ( RockPage ) this.Page;
 
-        var bannerImage = page.GetAttributeValue( "HeaderImage" );
+        var bannerImage = page.GetAttributeValue( "HeaderImageURL" ); <!-- changed from "HeaderImage" to "HeaderImageURL" to use cloudinary as host for image -->
         if(bannerImage != null)
         {
             header.Style.Add("background-image", "url('/GetImage.ashx?guid=" + bannerImage.AsGuid() + "')");
